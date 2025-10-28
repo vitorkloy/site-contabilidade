@@ -1,73 +1,89 @@
-# Welcome to your Lovable project
+# 🌟 Bem-vindo ao Projeto
 
-## Project info
+## Informações do Projeto
 
-**URL**: https://lovable.dev/projects/8dd1fa9d-11f4-4502-98ba-998ece48fa8d
+Este projeto é uma **Single Page Application (SPA)** de portfólio/institucional construída.
 
-## How can I edit this code?
+**Características Principais:**
 
-There are several ways of editing your application.
+* **Front-end Estático:** Desenvolvido para ser hospedado em serviços de deploy estático (como Vercel, Netlify).
+* **Formulário de Contato Funcional:** A lógica de envio de e-mail é tratada inteiramente no front-end por um serviço de terceiros (EmailJS), eliminando a necessidade de um servidor backend dedicado.
 
-**Use Lovable**
+## 🛠️ Tecnologias Utilizadas
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/8dd1fa9d-11f4-4502-98ba-998ece48fa8d) and start prompting.
+Este projeto utiliza as seguintes tecnologias:
 
-Changes made via Lovable will be committed automatically to this repo.
+* **Vite** — para o ambiente de desenvolvimento ultrarrápido e *bundling*.
+* **React** — biblioteca para construção da interface do usuário.
+* **TypeScript** — para tipagem estática, garantindo maior segurança e escalabilidade do código.
+* **Tailwind CSS** — para estilização rápida e responsiva com classes utilitárias.
+* **shadcn/ui** — biblioteca de componentes acessíveis e modernos baseados em Radix UI e Tailwind.
+* **EmailJS** — serviço utilizado para enviar e-mails diretamente do front-end.
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## ⬇️ Baixar e Configurar o Código
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Se quiser trabalhar localmente utilizando o seu próprio ambiente de desenvolvimento, siga os passos abaixo:
 
-Follow these steps:
+> **Pré-requisitos:**
+> É necessário ter o **Node.js** e o **npm** instalados.
+> Caso não tenha, instale utilizando o [nvm (Node Version Manager)](https://github.com/nvm-sh/nvm#installing-and-updating).
+
+### Passo a passo
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Passo 1: Clone o repositório utilizando a URL do projeto.
+git clone <URL_DO_SEU_REPOSITORIO>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Passo 2: Acesse o diretório do projeto.
+cd <NOME_DO_PROJETO>
 
-# Step 3: Install the necessary dependencies.
+# Passo 3: Instale as dependências necessárias.
 npm i
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Passo 4: Configure as variáveis de ambiente (próxima seção).
+
+# Passo 5: Inicie o servidor de desenvolvimento com atualização automática.
 npm run dev
+
+
+### 🔑 Configuração do Formulário de Contato (EmailJS)
+
+Para que o formulário de contato funcione, você precisa configurar um arquivo de variáveis de ambiente do Vite.
+
+1.  Crie uma conta no [EmailJS](https://www.emailjs.com/).
+
+2.  Configure seu Serviço de E-mail (ex: Gmail) e crie um **Template** (modelo) de e-mail.
+
+3.  Crie um arquivo chamado **`.env`** na raiz do projeto e insira suas chaves do EmailJS, seguindo o padrão do Vite (`VITE_`):
+
+    ```env
+    # .env
+    # Chaves necessárias para o envio de e-mail (EmailJS)
+    VITE_EMAILJS_SERVICE_ID="seu_service_id"
+    VITE_EMAILJS_TEMPLATE_ID="seu_template_id"
+    VITE_EMAILJS_PUBLIC_KEY="sua_chave_publica"
+    ```
+
+    > **Nota:** As variáveis com o prefixo `VITE_` são expostas no cliente (front-end), o que é seguro para a chave pública do EmailJS.
+
+-----
+
+## ☁️ Implantação do Projeto
+
+A aplicação é um projeto estático gerado pelo Vite, ideal para hospedagem gratuita.
+
+A implantação foi feita no serviço de hospedagem para aplicações front-end, **Vercel**.
+
+Basta criar uma conta no serviço de sua escolha, conectar seu repositório e seguir as instruções de publicação.
+O comando de build padrão para gerar a versão de produção é:
+
+```sh
+npm run build
 ```
 
-**Edit a file directly in GitHub**
+Os arquivos prontos para deploy serão gerados na pasta **dist/**.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/8dd1fa9d-11f4-4502-98ba-998ece48fa8d) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+```
+```
