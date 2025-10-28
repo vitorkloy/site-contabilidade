@@ -8,12 +8,12 @@ import { useToast } from "@/hooks/use-toast";
 import emailjs from "@emailjs/browser";
 
 // 2. CHAVES USANDO VARIÁVEIS DE AMBIENTE DO VITE
-const SERVICE_ID = "service_xjbjpzi";
+/* const SERVICE_ID = "service_xjbjpzi";
 const TEMPLATE_ID = "template_kzeasya";
-const PUBLIC_KEY = "pzpfcXsVmFv6NIT7c";
-/* const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const PUBLIC_KEY = "pzpfcXsVmFv6NIT7c"; */
+const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY; */
+const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
