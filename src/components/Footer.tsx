@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
-            <img src="../../public/image.png" alt="Globalpac" 
+            <img src="/logo-globalpac.png" alt="Globalpac" 
             className="font-bold text-lg mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"
             />
             <p className="text-muted-foreground text-sm">
